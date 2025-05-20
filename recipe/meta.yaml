@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-boto" %}
-{% set version = "0.54b0" %}
+{% set version = "0.54b1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_boto-{{ version }}.tar.gz
-  sha256: 19268b34be4dffda9ab38ac6d20eaa7e1f2dcfc3ea9a01e11b42855fbedc07f4
+  sha256: 83407a5f6f69cd0bebff802da0d228eb13196a1de713b43e1348b77f80033c6a
 
 build:
   noarch: python
@@ -22,8 +22,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.54b0
-    - opentelemetry-semantic-conventions ==0.54b0
+    - opentelemetry-instrumentation ==0.54b1
+    - opentelemetry-semantic-conventions ==0.54b1
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-boto 
     # - moto ~=2.0
@@ -63,6 +63,7 @@ requirements:
     # - opentelemetry-instrumentation-boto 
     # - moto ~=2.0
     # - markupsafe ==2.0.1
+    # - boto ~=2.0
     # - boto ~=2.0
     # - boto ~=2.0
     # - boto ~=2.0
